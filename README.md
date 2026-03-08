@@ -2,7 +2,7 @@
 
 A modern portfolio web application that showcases projects, skills, testimonials, and contact information with smooth animations and responsive design.
 
-Live Application: https://bumjun.devlyhub.in/
+Live Application: 
 
 ## Portfolio Preview
 
