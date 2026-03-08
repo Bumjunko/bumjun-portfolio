@@ -9,20 +9,20 @@ export const HeroSection = () => {
   const [displayedCode, setDisplayedCode] = useState("");
 
   const codeSnippets = [
-    "import { FullStackDeveloper } from 'bumjun.dev';",
+    "import { SoftwareDeveloper } from 'bumjun.dev';",
     "",
-    "const developer = new FullStackDeveloper({",
-    "  name: 'Bumjun',",
-    "  stack: ['React', 'Next.js', 'Node.js', 'TypeScript'],",
-    "  focus: 'Building scalable web applications',",
-    "  status: 'Open to new opportunities'",
+    "const developer = new SoftwareDeveloper({",
+    "  name: 'Bumjun Ko',",
+    "  stack: ['React', 'Node.js', 'Express.js', 'SQLite'],",
+    "  focus: 'Improving responsive UI and building practical web applications',",
+    "  status: 'Open to Software Engineer roles'",
     "});",
     "",
     "await developer.launchPortfolio();",
-    "// Featured: E-commerce, SaaS, Enterprise, Startup MVPs",
+    "// Featured: ASU Hours, AI Research, Mobile Optimization",
     "",
     "developer.connect();",
-    "console.log('🚀 Let's build something exceptional together!');"
+    "console.log(\"Thanks for visiting — let's connect.\");"
   ];
 
   const achievements = [
@@ -99,14 +99,14 @@ export const HeroSection = () => {
         <motion.div className="flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-20" initial="hidden" animate={isInView ? "visible" : "hidden"} variants={{ hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.25, delayChildren: 0.5 } } }}>
           
           <div className="flex-1 text-center lg:text-left max-w-2xl mx-auto lg:mx-0">
-            <motion.div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-8 backdrop-blur-sm" variants={{ hidden: { y: 30, opacity: 0 }, visible: { y: 0, opacity: 1, transition: { duration: 0.8 } } }}>
-              <Briefcase className="h-4 w-4" /> Currently Accepting new Opportunities
+            <motion.div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mt-5 mb-8 backdrop-blur-sm" variants={{ hidden: { y: 30, opacity: 0 }, visible: { y: 0, opacity: 1, transition: { duration: 0.8 } } }}>
+              <Briefcase className="h-4 w-4" /> Currently Seeking Software Engineering Opportunities
             </motion.div>
 
             <motion.h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight" variants={{ hidden: { y: 30, opacity: 0 }, visible: { y: 0, opacity: 1, transition: { duration: 0.8 } } }}>
               <span className="block text-foreground">I'm Bumjun</span>
-              <motion.span className="block bg-gradient-to-r from-primary via-purple-600 to-pink-600 bg-clip-text text-transparent mt-2" animate={{ backgroundPosition: ['0%', '100%', '0%'] }} transition={{ duration: 8, repeat: Infinity }} style={{ backgroundSize: '200% 100%' }}>
-                Full-Stack Engineer
+              <motion.span className="block whitespace-nowrap bg-gradient-to-r from-primary via-purple-600 to-pink-600 bg-clip-text text-transparent mt-2" animate={{ backgroundPosition: ['0%', '100%', '0%'] }} transition={{ duration: 8, repeat: Infinity }} style={{ backgroundSize: '200% 100%' }}>
+                Software Engineer
               </motion.span>
             </motion.h1>
 
@@ -149,7 +149,7 @@ export const HeroSection = () => {
               </motion.button>
             </motion.div>
 
-            <motion.div className="mt-6 text-center lg:text-left" variants={{ hidden: { y: 30, opacity: 0 }, visible: { y: 0, opacity: 1, transition: { duration: 0.8 } } }}>
+            <motion.div className="mt-5 text-center lg:text-left" variants={{ hidden: { y: 30, opacity: 0 }, visible: { y: 0, opacity: 1, transition: { duration: 0.8 } } }}>
               <div className="text-sm text-muted-foreground">
                 🚀 <span className="text-primary font-semibold">Available Immediately</span> for Full-Stack and Frontend roles
               </div>
@@ -172,43 +172,50 @@ export const HeroSection = () => {
                   <div className="w-4 h-4 bg-green-400/20 rounded-full animate-pulse"></div>
                 </div>
 
-                <div className="font-mono text-sm bg-primary/5 rounded-lg border border-primary/10 min-h-[280px] flex">
+                <div className="font-mono text-sm text-left bg-primary/5 rounded-lg border border-primary/10 min-h-[280px] flex">
                   <div className="p-6 w-full">
                     <div className="grid grid-cols-1 gap-1 h-full content-start">
-                      {codeSnippets.map((line, index) => (
-                        <div 
-                          key={index}
-                          className={`
-                            min-h-[20px] flex items-start
-                            ${index < currentCodeLine ? 'opacity-100' : 'opacity-0'}
-                            ${index === currentCodeLine ? 'opacity-100' : ''}
-                            transition-opacity duration-150 ease-in-out
-                            ${line.includes("import") ? "text-purple-400 font-semibold" : 
-                              line.includes("const") || line.includes("new") ? "text-blue-400 font-semibold" :
-                              line.includes("React") || line.includes("Node.js") || line.includes("TypeScript") ? "text-cyan-400" :
-                              line.includes("FullStackDeveloper") ? "text-emerald-400 font-semibold" :
-                              line.includes("//") ? "text-muted-foreground italic" :
-                              line.includes("await") || line.includes("connect") ? "text-yellow-400" :
-                              line.includes("'") ? "text-amber-400" : 
-                              "text-foreground"}
-                          `}
-                        >
-                          {index < currentCodeLine ? line : ''}
-                          {index === currentCodeLine ? (
-                            <>
-                              {displayedCode}
-                              <motion.span 
-                                animate={{ opacity: [1, 0, 1] }} 
-                                transition={{ duration: 0.8, repeat: Infinity }} 
-                                className="ml-1 text-primary inline-block"
-                              >
-                                ▊
-                              </motion.span>
-                            </>
-                          ) : ''}
-                          {line === '' && '‎'}
-                        </div>
-                      ))}
+                      {codeSnippets.map((line, index) => {
+                        const lineText = index < currentCodeLine ? line : index === currentCodeLine ? displayedCode : "";
+                        const leadingSpaces = (lineText.match(/^ +/) || [""])[0].length;
+                        const content = lineText.trimStart();
+
+                        return (
+                          <div
+                            key={index}
+                            style={{ paddingLeft: `${leadingSpaces}ch` }}
+                            className={`
+                              min-h-[20px] w-full flex items-start whitespace-pre-wrap break-words
+                              ${index < currentCodeLine ? "opacity-100" : "opacity-0"}
+                              ${index === currentCodeLine ? "opacity-100" : ""}
+                              transition-opacity duration-150 ease-in-out
+                              ${line.includes("import") ? "text-purple-400 font-semibold" :
+                                line.includes("const") || line.includes("new") ? "text-blue-400 font-semibold" :
+                                line.includes("React") || line.includes("Node.js") || line.includes("TypeScript") ? "text-cyan-400" :
+                              line.includes("SoftwareDeveloper") ? "text-emerald-400 font-semibold" :
+                                line.includes("//") ? "text-muted-foreground italic" :
+                                line.includes("await") || line.includes("connect") ? "text-yellow-400" :
+                                line.includes("'") ? "text-amber-400" :
+                                "text-foreground"}
+                            `}
+                          >
+                            {index !== currentCodeLine ? content : null}
+                            {index === currentCodeLine ? (
+                              <>
+                                {content}
+                                <motion.span
+                                  animate={{ opacity: [1, 0, 1] }}
+                                  transition={{ duration: 0.8, repeat: Infinity }}
+                                  className="ml-1 text-primary inline-block"
+                                >
+                                  ▊
+                                </motion.span>
+                              </>
+                            ) : null}
+                            {line === "" && "‎"}
+                          </div>
+                        );
+                      })}
                     </div>
                   </div>
                 </div>

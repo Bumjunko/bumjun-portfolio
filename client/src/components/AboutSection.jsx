@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Briefcase, Code, User, Download, Calendar, Sparkles, Target, Github, Linkedin, Twitter, Mail, Star } from 'lucide-react';
+import { Briefcase, Code, User, Download, Calendar, Sparkles, Target, Github, Linkedin, Mail, Star } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export const AboutSection = () => {
@@ -25,8 +25,7 @@ export const AboutSection = () => {
   const socialLinks = [
     { icon: <Github className="h-5 w-5" />, href: "https://www.github.com/bumjunmd01" },
     { icon: <Linkedin className="h-5 w-5" />, href: "https://www.linkedin.com/in/codewithkinu" },
-    { icon: <Twitter className="h-5 w-5" />, href: "#" },
-    { icon: <Mail className="h-5 w-5" />, href: "mailto:bumjunmd.dev@gmail.com" }
+    { icon: <Mail className="h-5 w-5" />, href: "mailto:bumjunko@gmail.com" }
   ];
 
   const tabContent = {
@@ -102,7 +101,7 @@ export const AboutSection = () => {
                   {/* Profile Image */}
                   <div className="relative flex-shrink-0">
                     <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl overflow-hidden border-4 border-primary/20 shadow-2xl transition-all duration-500 group-hover:border-primary/40 group-hover:scale-105 md:group-hover:scale-110 relative">
-                      <img src="/profile-logo.png" alt="Bumjun Ko" className="w-full h-full object-cover" />
+                      <img src="/고범준 증명사진.jpg" alt="Bumjun Ko" className="w-full h-full object-contain bg-white" />
                       <div className="absolute -bottom-2 -right-2 w-6 h-6 sm:w-8 sm:h-8 bg-green-500 rounded-full border-4 border-background flex items-center justify-center">
                         <div className="w-2 h-2 bg-green-300 rounded-full animate-pulse" />
                       </div>
@@ -210,7 +209,7 @@ export const AboutSection = () => {
               {/* Social Links */}
               <div className="mt-4 sm:mt-6 p-3 sm:p-4 bg-background/50 rounded-xl border border-border">
                 <h4 className="font-semibold mb-2 text-center text-sm sm:text-base">Quick Connect</h4>
-                <div className="flex flex-wrap justify-center gap-2 sm:gap-4">
+                <div className="flex items-center justify-center gap-1.5 sm:gap-2">
                   {socialLinks.map((social, index) => (
                     <a key={index} href={social.href} className="p-2 bg-background rounded-lg text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300 hover:scale-110">{social.icon}</a>
                   ))}

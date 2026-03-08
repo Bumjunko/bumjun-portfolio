@@ -187,7 +187,7 @@ export const Navbar = () => {
 
         {/* LinkedIn Button */}
         <motion.a
-          href="https://linkedin.com/in/codewithkinu" 
+          href="https://www.linkedin.com/in/bumjun-ko-7876543a8" 
           target="_blank"
           rel="noopener noreferrer"
           className={cn(
