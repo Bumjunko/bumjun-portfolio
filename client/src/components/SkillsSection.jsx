@@ -19,40 +19,37 @@ import pythonIcon from "@/assets/icons/python.png";
 import gitIcon from "@/assets/icons/git.png";
 import githubIcon from "@/assets/icons/github.png";
 import dockerIcon from "@/assets/icons/docker.png";
-import firebaseIcon from "@/assets/icons/firebase.png";
+import pandasIcon from "@/assets/icons/pandas.png";
 import vscodeIcon from "@/assets/icons/vscode.png";
-import clearkIcon from "@/assets/icons/cleark.png";
+import tensorflowIcon from "@/assets/icons/tensorflow.jpeg";
 import SQLIcon from "@/assets/icons/sql.png";
 import MySQLIcon from "@/assets/icons/mysql.png";
+import sqliteIcon from "@/assets/icons/sqlite.jpeg";
 
 const skills = [
   // Frontend
-  { name: "HTML5", level: 95, category: "frontend", icon: "html" },
-  { name: "CSS3", level: 90, category: "frontend", icon: "css" },
-  { name: "SASS", level: 85, category: "frontend", icon: "sass" },
-  { name: "JavaScript", level: 90, category: "frontend", icon: "javascript" },
-  { name: "TypeScript", level: 75, category: "frontend", icon: "typescript" },
-  { name: "React", level: 90, category: "frontend", icon: "react" },
-  { name: "Next.js", level: 75, category: "frontend", icon: "nextjs" },
+  { name: "HTML5", level: 80, category: "frontend", icon: "html" },
+  { name: "CSS3", level: 80, category: "frontend", icon: "css" },
+  { name: "JavaScript", level: 75, category: "frontend", icon: "javascript" },
+  { name: "React", level: 80, category: "frontend", icon: "react" },
+  { name: "Next.js", level: 55, category: "frontend", icon: "nextjs" },
+  { name: "Responsive UI", level: 80, category: "frontend", icon: "sass" },
 
   // Backend
-  { name: "Node.js", level: 90, category: "backend", icon: "nodejs" },
-  { name: "Express", level: 85, category: "backend", icon: "express" },
-  { name: "MongoDB", level: 90, category: "backend", icon: "mongodb" },
-  { name: "PostgreSQL", level: 65, category: "backend", icon: "postgresql" },
-  { name: "GraphQL", level: 60, category: "backend", icon: "graphql" },
-  { name: "Java", level: 60, category: "backend", icon: "java" },
-  { name: "Python", level: 60, category: "backend", icon: "python" },
+  { name: "Node.js", level: 75, category: "backend", icon: "nodejs" },
+  { name: "Express.js", level: 55, category: "backend", icon: "express" },
+  { name: "Java", level: 70, category: "backend", icon: "java" },
+  { name: "Python", level: 80, category: "backend", icon: "python" },
+  { name: "SQLite", level: 55, category: "backend", icon: "sqlite" },
+  { name: "MySQL", level: 70, category: "backend", icon: "mysql" },
 
   // Tools
-  { name: "Git", level: 90, category: "tools", icon: "git" },
-  { name: "GitHub", level: 90, category: "tools", icon: "github" },
-  { name: "Docker", level: 70, category: "tools", icon: "docker" },
-  { name: "Firebase", level: 80, category: "tools", icon: "firebase" },
-  { name: "VS Code", level: 95, category: "tools", icon: "vscode" },
-  { name: "Cleark", level: 90, category: "tools", icon: "cleark" },
-  { name: "SQL", level: 90, category: "tools", icon: "sql" },
-  { name: "MySQL", level: 90, category: "tools", icon: "mysql" },
+  { name: "Git", level: 85, category: "tools", icon: "git" },
+  { name: "GitHub", level: 75, category: "tools", icon: "github" },
+  { name: "VS Code", level: 90, category: "tools", icon: "vscode" },
+  { name: "pandas", level: 55, category: "tools", icon: "pandas" },
+  { name: "TensorFlow", level: 55, category: "tools", icon: "tensorflow" },
+  { name: "Jupyter", level: 60, category: "tools", icon: "docker" },
 ];
 
 const categories = [
@@ -80,11 +77,12 @@ const iconImages = {
   git: gitIcon,
   github: githubIcon,
   docker: dockerIcon,
-  firebase: firebaseIcon,
+  pandas: pandasIcon,
   vscode: vscodeIcon,
-  cleark: clearkIcon,
+  tensorflow: tensorflowIcon,
   sql: SQLIcon,
   mysql: MySQLIcon,
+  sqlite: sqliteIcon,
 };
 
 const SkillBar = ({ level }) => (
@@ -154,11 +152,11 @@ export const SkillsSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center mb-20"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/80">
+          <h2 className="text-4xl md:text-5xl font-bold leading-[1.15] pb-1 mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/80">
             My Skills
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            Technologies I've mastered and my proficiency levels
+          <p className="text-muted-foreground max-w-2xl mx-auto text-lg lg:whitespace-nowrap">
+            Technologies I use across coursework, projects, and responsive web application work
           </p>
         </motion.div>
 

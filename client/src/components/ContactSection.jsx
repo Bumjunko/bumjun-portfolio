@@ -1,11 +1,9 @@
 import {
-  Instagram,
   Linkedin,
   Mail,
   MapPin,
   Phone,
   Send,
-  Twitter,
   Github,
   Loader2
 } from "lucide-react";
@@ -113,7 +111,7 @@ export const ContactSection = () => {
             Get In Touch
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
-            Have a project in mind or just want to say hi? My inbox is always open.
+            Open to software engineering roles, student technology projects, and collaboration opportunities.
           </p>
         </div>
 
@@ -179,19 +177,9 @@ export const ContactSection = () => {
                     url: "https://www.linkedin.com/in/bumjun-ko-7876543a8",
                   },
                   {
-                    icon: Twitter,
-                    label: "Twitter",
-                    url: "#",
-                  },
-                  {
                     icon: Github,
                     label: "GitHub",
-                    url: "https://github.com/Bumjunmd01",
-                  },
-                  {
-                    icon: Instagram,
-                    label: "Instagram",
-                    url: "https://www.instagram.com/dubbinut",
+                    url: "https://github.com/Bumjunko",
                   },
                 ].map((social, index) => (
                   <a

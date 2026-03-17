@@ -1,11 +1,9 @@
 import {
   ArrowUp,
   Linkedin,
-  Instagram,
   Github,
   Mail,
   Phone,
-  MapPin,
 } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -14,14 +12,14 @@ export const Footer = () => {
   
   const socialLinks = [
     { icon: <Linkedin size={18} />, href: "https://www.linkedin.com/in/bumjun-ko-7876543a8", label: "LinkedIn" },
-    { icon: <Instagram size={18} />, href: "https://instagram.com/dubbinut", label: "Instagram" },
-    { icon: <Github size={18} />, href: "https://github.com/bumjunmd01", label: "GitHub" },
+    { icon: <Github size={18} />, href: "https://github.com/Bumjunko", label: "GitHub" },
+    { icon: <Mail size={18} />, href: "mailto:bumjunko@gmail.com", label: "Email" },
   ];
 
   const quickLinks = [
     { name: "Home", href: "#hero" },
     { name: "About", href: "#about" },
-    { name: "Work", href: "#work" },
+    { name: "Projects", href: "#projects" },
     { name: "Contact", href: "#contact" },
   ];
 
@@ -66,9 +64,9 @@ export const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {/* Branding */}
             <motion.div variants={itemVariants} className="space-y-4 text-center">
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white">BUMJUN</h3>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white">Bumjun Ko</h3>
               <p className="text-gray-600 dark:text-gray-300 text-sm">
-                Digital designer & developer creating meaningful experiences.
+                Computer Science student at Angelo State University building practical web applications and student-facing tools.
               </p>
               <div className="flex justify-center space-x-4">
                 {socialLinks.map((social, index) => (
@@ -110,16 +108,16 @@ export const Footer = () => {
             </motion.div>
 
             {/* Contact */}
-            <motion.div variants={itemVariants}>
+            <motion.div variants={itemVariants} className="text-center">
               <h4 className="text-gray-900 dark:text-white font-medium mb-4 text-sm uppercase tracking-wider">Contact</h4>
               <ul className="space-y-3">
                 {contactInfo.map((info, index) => (
                   <motion.li 
                     key={index}
-                    className="flex items-start space-x-3 text-sm"
+                    className="flex items-center justify-center space-x-3 text-sm"
                     whileHover={{ scale: 1.02 }}
                   >
-                    <span className="text-gray-600 dark:text-gray-400 mt-0.5">{info.icon}</span>
+                    <span className="text-gray-600 dark:text-gray-400">{info.icon}</span>
                     {info.href ? (
                       <a 
                         href={info.href} 
@@ -135,26 +133,15 @@ export const Footer = () => {
               </ul>
             </motion.div>
 
-            {/* Newsletter */}
+            {/* Education */}
             <motion.div variants={itemVariants} className="space-y-4">
-              <h4 className="text-gray-900 dark:text-white font-medium text-sm uppercase tracking-wider">Newsletter</h4>
+              <h4 className="text-gray-900 dark:text-white font-medium text-sm uppercase tracking-wider">Education</h4>
               <p className="text-gray-600 dark:text-gray-300 text-sm">
-                Subscribe to get updates on my latest work.
+                B.S. in Computer Science at Angelo State University with a Data Science certificate program in progress.
               </p>
-              <form className="space-y-3">
-                <input 
-                  type="email" 
-                  placeholder="Your email" 
-                  className="px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 dark:bg-gray-800/50 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-900 dark:focus:ring-gray-300 focus:border-gray-900 dark:focus:border-gray-300 w-full"
-                  required
-                />
-                <button 
-                  type="submit"
-                  className="bg-gray-900 hover:bg-gray-800 dark:bg-white dark:hover:bg-gray-200 dark:text-gray-900 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 w-full"
-                >
-                  Subscribe
-                </button>
-              </form>
+              <p className="text-gray-600 dark:text-gray-300 text-sm">
+                Web and Mobile Development Certificate Program is also in progress with one course remaining.
+              </p>
             </motion.div>
           </div>
 

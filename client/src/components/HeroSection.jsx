@@ -1,4 +1,4 @@
-import { ArrowDown, MousePointerClick, Sparkles, Code, Palette, Rocket, Award, Download, Calendar, Shield, Zap, Users, TrendingUp, Briefcase, Mail } from "lucide-react";
+import { ArrowDown, MousePointerClick, Sparkles, Code, Palette, Rocket, Award, Download, Calendar, Zap, Users, TrendingUp, Briefcase, Mail } from "lucide-react";
 import { motion, useInView } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 
@@ -9,27 +9,27 @@ export const HeroSection = () => {
   const [displayedCode, setDisplayedCode] = useState("");
 
   const codeSnippets = [
-    "import { SoftwareDeveloper } from 'bumjun.dev';",
+    "import { TechProfessional } from 'bumjun.dev';",
     "",
-    "const developer = new SoftwareDeveloper({",
+    "const developer = new TechProfessional({",
     "  name: 'Bumjun Ko',",
-    "  stack: ['React', 'Node.js', 'Express.js', 'SQLite'],",
-    "  focus: 'Improving responsive UI and building practical web applications',",
-    "  status: 'Open to Software Engineer roles'",
+    "  stack: ['React', 'Node.js', 'Express.js', 'SQLite', 'Python', 'C++'],",
+    "  focus: 'Building practical software and improving user experiences',",
+    "  status: 'Open to CS roles',",
     "});",
     "",
     "await developer.launchPortfolio();",
-    "// Featured: ASU Hours, AI Research, Mobile Optimization",
+    "// Featured: ASU Hours, churn prediction, database design",
     "",
     "developer.connect();",
     "console.log(\"Thanks for visiting — let's connect.\");"
   ];
 
   const achievements = [
-    { number: "3+", label: "Months in Production", icon: <Shield className="h-3 w-3" /> },
-    { number: "2+", label: "Projects Completed", icon: <TrendingUp className="h-3 w-3" /> },
-    { number: "3+", label: "Projects in Progress", icon: <Zap className="h-3 w-3" /> },
-    { number: "100%", label: "Completion Rate", icon: <Award className="h-3 w-3" /> }
+    { number: "2+", label: "Completed Projects", icon: <TrendingUp className="h-3 w-3" /> },
+    { number: "2+", label: "Active Projects", icon: <Zap className="h-3 w-3" /> },
+    { number: "2", label: "Languages", icon: <Award className="h-3 w-3" /> },
+    { number: "20+", label: "Event Organized", icon: <Calendar className="h-3 w-3" /> }
   ];
 
   useEffect(() => {
@@ -55,7 +55,7 @@ export const HeroSection = () => {
 
   const handleViewResume = () => {
     // Open resume in new tab
-    window.open('/Bumjun-resume.pdf', '_blank', 'noopener,noreferrer');
+    window.open('/Resume for Website - Bumjun Ko.pdf', '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -100,18 +100,18 @@ export const HeroSection = () => {
           
           <div className="flex-1 text-center lg:text-left max-w-2xl mx-auto lg:mx-0">
             <motion.div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mt-5 mb-8 backdrop-blur-sm" variants={{ hidden: { y: 30, opacity: 0 }, visible: { y: 0, opacity: 1, transition: { duration: 0.8 } } }}>
-              <Briefcase className="h-4 w-4" /> Currently Seeking Software Engineering Opportunities
+              <Briefcase className="h-4 w-4" /> Currently Seeking Opportunities in Software, and Technology Operations
             </motion.div>
 
             <motion.h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight" variants={{ hidden: { y: 30, opacity: 0 }, visible: { y: 0, opacity: 1, transition: { duration: 0.8 } } }}>
               <span className="block text-foreground">I'm Bumjun</span>
               <motion.span className="block whitespace-nowrap bg-gradient-to-r from-primary via-purple-600 to-pink-600 bg-clip-text text-transparent mt-2" animate={{ backgroundPosition: ['0%', '100%', '0%'] }} transition={{ duration: 8, repeat: Infinity }} style={{ backgroundSize: '200% 100%' }}>
-                Software Engineer
+                Seeking CS Roles
               </motion.span>
             </motion.h1>
 
             <motion.p className="text-lg sm:text-xl text-muted-foreground mt-6 leading-relaxed max-w-2xl" variants={{ hidden: { y: 30, opacity: 0 }, visible: { y: 0, opacity: 1, transition: { duration: 0.8 } } }}>
-              I build <span className="text-primary font-semibold">high-performance web applications</span> that drive business growth. Specializing in React, Node.js, and scalable architecture for startups and enterprises.
+              Computer Science student at <span className="text-primary font-semibold">Angelo State University</span> with experience in web applications, operational support, and data-informed problem solving for student-facing and organizational tools.
             </motion.p>
 
             <motion.div className="grid grid-cols-2 sm:grid-cols-4 gap-4 my-8" variants={{ hidden: { y: 30, opacity: 0 }, visible: { y: 0, opacity: 1, transition: { duration: 0.8 } } }}>
@@ -129,13 +129,13 @@ export const HeroSection = () => {
             <motion.div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start" variants={{ hidden: { y: 30, opacity: 0 }, visible: { y: 0, opacity: 1, transition: { duration: 0.8 } } }}>
               <motion.a href="#projects" className="group relative overflow-hidden px-8 py-4 rounded-xl font-semibold bg-gradient-to-r from-primary to-purple-600 text-primary-foreground shadow-lg hover:shadow-xl text-sm flex items-center justify-center gap-3" whileHover={{ scale: 1.05, y: -2 }} whileTap={{ scale: 0.95 }}>
                 <Code className="h-5 w-5" /> 
-                <span>View Case Studies</span>
+                <span>View Projects</span>
                 <TrendingUp className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </motion.a>
               
               <motion.a href="#contact" className="group relative overflow-hidden px-8 py-4 rounded-xl font-semibold border border-primary/50 text-foreground hover:border-primary transition-all duration-300 bg-background/80 backdrop-blur-sm text-sm flex items-center justify-center gap-3" whileHover={{ scale: 1.05, y: -2 }} whileTap={{ scale: 0.95 }}>
                 <Mail className="h-4 w-4" /> 
-                <span>Technical Interview</span>
+                <span>Let's Connect</span>
               </motion.a>
               
               <motion.button 
@@ -151,7 +151,7 @@ export const HeroSection = () => {
 
             <motion.div className="mt-5 text-center lg:text-left" variants={{ hidden: { y: 30, opacity: 0 }, visible: { y: 0, opacity: 1, transition: { duration: 0.8 } } }}>
               <div className="text-sm text-muted-foreground">
-                🚀 <span className="text-primary font-semibold">Available Immediately</span> for Full-Stack and Frontend roles
+                <span className="text-primary font-semibold">🚀 Open to CS roles in the U.S.</span>
               </div>
             </motion.div>
           </div>
@@ -190,9 +190,9 @@ export const HeroSection = () => {
                               ${index === currentCodeLine ? "opacity-100" : ""}
                               transition-opacity duration-150 ease-in-out
                               ${line.includes("import") ? "text-purple-400 font-semibold" :
-                                line.includes("const") || line.includes("new") ? "text-blue-400 font-semibold" :
+                                line.includes("const") || line.includes("new") || line === "});" ? "text-blue-400 font-semibold" :
                                 line.includes("React") || line.includes("Node.js") || line.includes("TypeScript") ? "text-cyan-400" :
-                              line.includes("SoftwareDeveloper") ? "text-emerald-400 font-semibold" :
+                              line.includes("TechProfessional") ? "text-emerald-400 font-semibold" :
                                 line.includes("//") ? "text-muted-foreground italic" :
                                 line.includes("await") || line.includes("connect") ? "text-yellow-400" :
                                 line.includes("'") ? "text-amber-400" :

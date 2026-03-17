@@ -2,19 +2,17 @@ import { useEffect, useState, useRef } from "react";
 import {
   Home,
   User,
+  Users,
   Code,
   Briefcase,
-  MessageSquare,
   Mail,
-  BookOpen,
   Sun,
   Moon,
-  Youtube,
   Volume2,
   VolumeX,
   Github,
   Linkedin,
-  Globe,
+  Download,
 } from "lucide-react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
@@ -22,11 +20,10 @@ import { cn } from "@/lib/utils";
 const navItems = [
   { name: "Home", href: "#hero", icon: Home },
   { name: "About", href: "#about", icon: User },
+  { name: "Experience", href: "#experience", icon: Users },
   { name: "Skills", href: "#skills", icon: Code },
   { name: "Projects", href: "#projects", icon: Briefcase },
-  { name: "Testimonials", href: "#testimonials", icon: MessageSquare },
   { name: "Contact", href: "#contact", icon: Mail },
-  { name: "Blog", href: "https://blogni.vercel.app", icon: BookOpen },
 ];
 
 const ThemeToggle = () => {
@@ -67,7 +64,7 @@ export const Navbar = () => {
   const lastScrollYRef = useRef(0);
   const audioRef = useRef(null);
 
-  const musicUrl = "/music.mp3";
+  const musicUrl = "/Reminiscence_TalesWeaver.mp3";
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -147,9 +144,9 @@ export const Navbar = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.3 }}
       >
-        {/* Website Globe Button */}
+        {/* Resume Button */}
         <motion.a
-          href="https://avoliq.vercel.app"
+          href="/Resume for Website - Bumjun Ko.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className={cn(
@@ -160,29 +157,10 @@ export const Navbar = () => {
           )}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          title="My Website"
-          aria-label="My Website"
+          title="Resume"
+          aria-label="Resume"
         >
-          <Globe className="w-5 h-5" />
-        </motion.a>
-
-        {/* YouTube Button */}
-        <motion.a
-          href="https://www.youtube.com/@codewithkinu"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={cn(
-            "p-2 rounded-full bg-white/80 dark:bg-black/80 backdrop-blur-md",
-            "text-red-600 hover:bg-red-100 dark:hover:bg-red-900/50",
-            "border border-gray-200 dark:border-gray-700 shadow-sm",
-            "flex items-center justify-center"
-          )}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          title="YouTube Channel"
-          aria-label="YouTube Channel"
-        >
-          <Youtube className="w-5 h-5" />
+          <Download className="w-5 h-5" />
         </motion.a>
 
         {/* LinkedIn Button */}
@@ -206,7 +184,7 @@ export const Navbar = () => {
 
         {/* GitHub Button */}
         <motion.a
-          href="https://github.com/bumjunmd01" 
+          href="https://github.com/Bumjunko" 
           target="_blank"
           rel="noopener noreferrer"
           className={cn(
