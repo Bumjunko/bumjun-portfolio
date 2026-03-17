@@ -19,7 +19,7 @@ export const HeroSection = () => {
     "});",
     "",
     "await developer.launchPortfolio();",
-    "// Featured: ASU Hours, churn prediction, database design",
+    "// Featured: ASU Hours, IBM AI Project, KSEA ASU YG President",
     "",
     "developer.connect();",
     "console.log(\"Thanks for visiting — let's connect.\");"
