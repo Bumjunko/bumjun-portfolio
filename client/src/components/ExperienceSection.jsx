@@ -218,8 +218,8 @@ export const ExperienceSection = () => {
           {experiences.map((experience, index) => (
             <motion.div
               key={experience.id}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
               className="group flex min-w-[320px] self-stretch snap-start sm:min-w-[360px] lg:min-w-[380px]"
