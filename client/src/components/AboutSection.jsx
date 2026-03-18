@@ -29,7 +29,7 @@ export const AboutSection = () => {
   ];
 
   const tabContent = {
-    personal: "I am a Korean Computer Science student at Angelo State University now based in San Angelo, Texas. After serving in the Republic of Korea Army, I returned to school with stronger discipline, consistency, and attention to detail.",
+    personal: "I am a Computer Science student at Angelo State University now based in San Angelo, Texas. After serving in the Republic of Korea Army, I returned to school with stronger discipline, consistency, and attention to detail.",
     professional: "My strongest work sits at the intersection of web applications, responsive UI, and operational information. I have hands-on experience with React, Node.js, Express.js, SQLite, SQL-based coursework, and student-facing software projects.",
     approach: "I enjoy work that connects technology, users, and operations. That means improving usability, organizing information clearly, and collaborating across technical and non-technical teams in both Korean and English."
   };
